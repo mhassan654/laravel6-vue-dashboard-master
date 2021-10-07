@@ -1,9 +1,48 @@
 <template>
   <div class="row">
-    <div class="col-lg-7 m-auto">
+
+    <div class="col-md-6 m-auto">
+  <div class="authincation-content">
+      <div class="row no-gutters">
+          <div class="col-xl-12">
+              <div class="auth-form">
+                  <h4 class="text-center mb-4">Sign in your account</h4>
+                  <form action="{!! url('/index'); !!}">
+                      <div class="form-group">
+                          <label class="mb-1"><strong>Email</strong></label>
+                          <input type="email" class="form-control" value="hello@example.com">
+                      </div>
+                      <div class="form-group">
+                          <label class="mb-1"><strong>Password</strong></label>
+                          <input type="password" class="form-control" value="Password">
+                      </div>
+                      <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                        <div class="form-group">
+                           <div class="custom-control custom-checkbox ml-1">
+                              <input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
+                              <label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a href="{!! url('/page-forgot-password'); !!}">Forgot Password?</a>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                      </div>
+                  </form>
+                  <div class="new-account mt-3">
+                      <p>Don't have an account? <a class="text-primary" href="{!! url('/page-register'); !!}" >Sign up</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+    <!-- <div class="col-lg-7 m-auto">
       <card :title="$t('login')">
         <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-          <!-- Email -->
+
           <div class="mb-3 row">
             <label class="col-md-3 col-form-label text-md-end">{{ $t('email') }}</label>
             <div class="col-md-7">
@@ -12,7 +51,7 @@
             </div>
           </div>
 
-          <!-- Password -->
+
           <div class="mb-3 row">
             <label class="col-md-3 col-form-label text-md-end">{{ $t('password') }}</label>
             <div class="col-md-7">
@@ -21,7 +60,7 @@
             </div>
           </div>
 
-          <!-- Remember Me -->
+
           <div class="mb-3 row">
             <div class="col-md-3" />
             <div class="col-md-7 d-flex">
@@ -37,18 +76,17 @@
 
           <div class="mb-3 row">
             <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
+
               <v-button :loading="form.busy">
                 {{ $t('login') }}
               </v-button>
 
-              <!-- GitHub Login Button -->
               <login-with-github />
             </div>
           </div>
         </form>
       </card>
-    </div>
+    </div> -->
   </div>
 </template>
 
